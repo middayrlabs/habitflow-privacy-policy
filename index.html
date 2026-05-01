@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – HabitFlow</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232e7d32'/><path d='M28 52 L44 68 L72 36' stroke='white' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark:   #1b5e20;
+      --green-mid:    #2e7d32;
+      --green-light:  #43a047;
+      --green-pale:   #e8f5e9;
+      --green-accent: #66bb6a;
+      --text-primary: #1a1f1a;
+      --text-secondary: #4a524a;
+      --text-muted:   #7a877a;
+      --border:       #d8e8d8;
+      --bg:           #f4f8f4;
+      --card-bg:      #ffffff;
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-primary);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+      color: #fff;
+      padding: 56px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,.07) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.05) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .header-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: rgba(255,255,255,.18);
+      border: 2px solid rgba(255,255,255,.3);
+      border-radius: 18px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .header-icon svg { width: 32px; height: 32px; }
+
+    header h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.15);
+    }
+
+    .header-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: .3px;
+      margin-top: 4px;
+      backdrop-filter: blur(4px);
+    }
+
+    .header-meta span { opacity: .75; }
+
+    /* ── LAYOUT ── */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green-mid);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 16px rgba(46,125,50,.06);
+    }
+
+    .intro-card p {
+      color: var(--text-secondary);
+      font-size: .97rem;
+    }
+
+    .intro-card strong { color: var(--green-dark); }
+
+    /* ── SECTION CARDS ── */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 32px 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(46,125,50,.05);
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 6px 24px rgba(46,125,50,.1);
+      transform: translateY(-1px);
+    }
+
+    .section-number {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      background: var(--green-pale);
+      border-radius: 100px;
+      padding: 3px 12px;
+      margin-bottom: 10px;
+    }
+
+    .section-card h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--green-dark);
+      margin-bottom: 14px;
+      letter-spacing: -0.2px;
+    }
+
+    .section-card p,
+    .section-card li {
+      color: var(--text-secondary);
+      font-size: .96rem;
+    }
+
+    .section-card ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .section-card ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .section-card ul li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 7px;
+      height: 7px;
+      background: var(--green-accent);
+      border-radius: 50%;
+      margin-top: 9px;
+    }
+
+    .section-card p + p { margin-top: 10px; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: var(--green-pale);
+      border: 1px solid #c8e6c9;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 14px;
+      font-size: .92rem;
+      color: var(--green-dark);
+      font-weight: 500;
+    }
+
+    .highlight-box svg {
+      vertical-align: middle;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin-bottom: 20px;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(46,125,50,.2);
+    }
+
+    .contact-card .section-number {
+      background: rgba(255,255,255,.2);
+      color: #fff;
+    }
+
+    .contact-card h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .contact-card p { color: rgba(255,255,255,.88); font-size: .96rem; }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 100px;
+      padding: 10px 22px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: .9rem;
+      backdrop-filter: blur(4px);
+      transition: background .2s, transform .15s;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,.28);
+      transform: translateY(-1px);
+    }
+
+    /* ── LINKS ── */
+    a {
+      color: var(--green-mid);
+      text-decoration: none;
+      transition: color .15s;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      color: var(--green-dark);
+      border-bottom-color: var(--green-accent);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 28px 20px 40px;
+      color: var(--text-muted);
+      font-size: .82rem;
+    }
+
+    footer .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--green-mid);
+      font-size: .9rem;
+      margin-bottom: 8px;
+    }
+
+    footer .footer-logo svg { width: 18px; height: 18px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header { padding: 44px 20px 40px; }
+      .section-card, .contact-card, .intro-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="header-icon">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 16 L13 23 L26 10" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <h1>Privacy Policy for HabitFlow</h1>
+  <div class="header-meta">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>Effective Date:</span> May 1, 2026
+  </div>
+</header>
+
+<!-- ══════════ MAIN ══════════ -->
+<main>
+
+  <!-- Intro -->
+  <div class="intro-card">
+    <p>
+      At <strong>HabitFlow</strong>, your privacy is a core principle, not an afterthought. This policy explains in plain language
+      what data we handle, how third-party services interact with the app, and what rights you have.
+      HabitFlow is designed as an <strong>offline-first application</strong> — your habit data never leaves your device.
+    </p>
+  </div>
+
+  <!-- 1. Information We Do Not Collect -->
+  <div class="section-card">
+    <span class="section-number">Section 01</span>
+    <h2>Information We Do Not Collect</h2>
+    <p>HabitFlow does not collect, transmit, or store any personal data on external servers. Specifically, we do <strong>not</strong> collect:</p>
+    <ul>
+      <li>Your name, email address, or any contact information</li>
+      <li>Account credentials or authentication data</li>
+      <li>Location data or device identifiers linked to your identity</li>
+      <li>Health, fitness, or behavioral data you enter into the app</li>
+      <li>Usage analytics, crash reports, or telemetry sent to our servers</li>
+    </ul>
+    <div class="highlight-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      All habit data, streaks, and settings are stored <strong>locally on your device only</strong>. Uninstalling the app removes all associated data.
+    </div>
+  </div>
+
+  <!-- 2. Third-Party Services -->
+  <div class="section-card">
+    <span class="section-number">Section 02</span>
+    <h2>Third-Party Services (AdMob)</h2>
+    <p>
+      HabitFlow displays advertisements served by <strong>Google AdMob</strong>, a third-party advertising platform operated by Google LLC.
+      To serve relevant ads, AdMob may collect certain non-personal and device-level information, including:
+    </p>
+    <ul>
+      <li>Advertising ID (resettable identifier assigned by your device OS)</li>
+      <li>General device information (model, OS version)</li>
+      <li>Approximate location (country/region level, if permitted)</li>
+      <li>Ad interaction data (impressions, clicks)</li>
+    </ul>
+    <p style="margin-top:14px;">
+      This data is collected and processed by Google under their own privacy policy. HabitFlow has no access to or control over
+      the data AdMob collects. You can review Google's data practices and opt-out options at:
+    </p>
+    <p style="margin-top:10px;">
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+        https://policies.google.com/privacy →
+      </a>
+    </p>
+    <p style="margin-top:10px;">
+      You can reset or limit your Advertising ID at any time in your device's Settings under Privacy or Ads.
+    </p>
+  </div>
+
+  <!-- 3. Cookies and Tracking -->
+  <div class="section-card">
+    <span class="section-number">Section 03</span>
+    <h2>Cookies and Tracking Technologies</h2>
+    <p>
+      HabitFlow itself does not use cookies, web beacons, pixel tags, or any tracking technologies.
+    </p>
+    <p>
+      Google AdMob may use cookies or similar technologies within its ad-serving SDK to measure ad performance and deliver
+      personalized or contextual advertisements. These technologies are governed exclusively by Google's policies.
+    </p>
+    <p>
+      If you prefer non-personalized ads, you can opt out of interest-based advertising through your device's advertising settings
+      or via <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>.
+    </p>
+  </div>
+
+  <!-- 4. Data Security -->
+  <div class="section-card">
+    <span class="section-number">Section 04</span>
+    <h2>Data Security</h2>
+    <p>
+      Because HabitFlow stores all data locally on your device, your information is protected by your device's
+      built-in security mechanisms — including screen lock, encryption (if enabled), and operating system sandboxing.
+    </p>
+    <p>
+      We strongly recommend keeping your device updated and using a secure lock screen to safeguard your data.
+      Since we operate no servers storing your data, there is no central database that could be compromised.
+    </p>
+  </div>
+
+  <!-- 5. Children's Privacy -->
+  <div class="section-card">
+    <span class="section-number">Section 05</span>
+    <h2>Children's Privacy</h2>
+    <p>
+      HabitFlow is not directed at children under the age of 13. We do not knowingly collect personal information from children.
+    </p>
+    <p>
+      If you are a parent or guardian and believe your child has provided personal data through the app, please contact us
+      at the email below and we will take appropriate action. Please note that ad content shown via AdMob is subject to Google's
+      own child-safety policies.
+    </p>
+  </div>
+
+  <!-- 6. Changes -->
+  <div class="section-card">
+    <span class="section-number">Section 06</span>
+    <h2>Changes to This Privacy Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements,
+      or third-party service integrations.
+    </p>
+    <p>
+      When we make changes, we will update the <strong>Effective Date</strong> at the top of this page and, where appropriate,
+      notify you within the app. We encourage you to review this policy periodically. Continued use of HabitFlow after
+      any changes constitutes your acceptance of the updated policy.
+    </p>
+  </div>
+
+  <!-- 7. Contact -->
+  <div class="contact-card">
+    <span class="section-number">Section 07</span>
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Privacy Policy or HabitFlow's data practices,
+      please reach out — we're happy to help.
+    </p>
+    <a class="contact-link" href="mailto:middayrlabs@gmail.com">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      middayrlabs@gmail.com
+    </a>
+  </div>
+
+  <!-- 8. Consent -->
+  <div class="section-card">
+    <span class="section-number">Section 08</span>
+    <h2>Consent</h2>
+    <p>
+      By downloading and using HabitFlow, you acknowledge that you have read and understood this Privacy Policy
+      and agree to its terms.
+    </p>
+    <p>
+      You also acknowledge that HabitFlow integrates Google AdMob for advertising, and that Google may collect
+      certain non-personal, device-level data in accordance with their own privacy policy linked above.
+    </p>
+  </div>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="8" fill="#2e7d32"/>
+      <path d="M7 16 L13 22 L25 11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    HabitFlow
+  </div>
+  <p>© 2026 HabitFlow · Middayr Labs · <a href="mailto:middayrlabs@gmail.com">middayrlabs@gmail.com</a></p>
+  <p style="margin-top:6px;">All rights reserved. This policy is effective as of May 1, 2026.</p>
+</footer>
+
+</body>
+</html>
